@@ -1,1 +1,27 @@
-<!-- El cuerpo del juego estará acá -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adivina el número</title>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="centered">
+	<div class="gamecontainer">
+		<p id="attemptNum">00/10</p>
+		<p id="attempts">Intentos:</p>
+		<p id="msgAttempt">En Espera</p> <!--Muestra si es correcto o incorrecto-->
+		<p id="hint">---</p><!--Muestra si es muy bajo, o muy alto-->
+
+		<label for="attemptField">Ingresa tu predicción</label>
+		<input type="text" id="attemptField" class="attemptField" placeholder="Tu predicción aquí">
+		<input type="submit" value="Enviar respuesta" id="attemptSubmit">
+	</div>
+</div>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>
