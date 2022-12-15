@@ -1,5 +1,158 @@
-body{
-    background-color: aliceblue;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+:root {
+    --main-color: #4a0c6e;
+    --light-color: #FE7B63;
+    --font-color: #fafafa;
+    --secondary-color: #126583;
+    --bad-color:rgb(248, 94, 163);
+    --warn-color:rgb(176, 239, 252);
+    --right-color:rgb(112, 248, 94);
+    --send-color: #418c3d;
+    --reset-color:rgb(180, 47, 47);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    color: var(--font-color);
+    background-color: var(--main-color);
+    cursor: default;
+}
+
+.centered {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
     text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-title {
+    font-size: 4.5rem;
+    margin-bottom: 0px;
+}
+
+.instruction{
+    font-size: 2rem;
+    margin-top: 0px;
+    margin-bottom: 1.3rem;
+}
+
+.player-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.7rem;
+    padding: 2.0rem 0;
+}
+
+.attemps{
+    font-weight: bold;
+    padding: 4px 3%;
+    background-color:var(--light-color);
+    color: var(--font-color);
+}
+
+.attemps-history{
+    height: 4.4rem;
+    font-weight: bold;
+    margin-top: 2.5rem;
+    font-size: 1.7rem;
+}
+
+.log{
+    margin: 0px 5px;
+}
+
+.log::before{
+    font-size: 1rem;
+    content: "🟠";
+
+    margin-right: .2rem;
+}
+
+span.high{
+    color: var(--bad-color);
+}
+
+span.low{
+    color: var(--warn-color)
+}
+
+span.right{
+    color:var(--right-color)
+}
+
+#user-attemp{
+    color: rgb(40, 40, 40);
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 3px 12px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.send{
+    background-color: var(--send-color);
+    color: var(--font-color);
+}
+
+.reset{
+    background-color: var(--reset-color);
+    color: var(--font-color);
+}
+
+.btn{
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 18px;
+    padding: 4px 20px;
+    border: none;
+    border-radius:8px;
+    box-shadow: 2px 2px 0px rgb(48, 48, 48);
+}
+
+.btn:hover{
+    box-shadow: none;
+    transition: all 200ms;
+}
+
+.feedback{
+    font-weight: bold;
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--secondary-color);
+}
+
+p.high{
+    background-color: var(--bad-color);
+}
+
+p.right{
+    color: var(--main-color);
+    background-color: var(--right-color);
+}
+
+p.low{
+    color: var(--secondary-color);
+    background-color: var(--warn-color);
 }
